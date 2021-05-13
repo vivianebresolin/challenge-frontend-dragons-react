@@ -1,0 +1,50 @@
+// :root {
+//     --background-website: #Faaa;
+// }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    @media (max-width: 1080px) {
+        font-size: 93.75%;
+    }
+
+    @media (max-width: 720px) {
+        font-size: 87.5%;
+    }
+
+    @media (max-width: 380px) {
+        font-size: 68.75%;  
+    }
+}
+
+body {
+    height: 100vh;
+    background-image: url('../img/bg-dragons.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Oswald', sans-serif;   
+}
+
+input {
+    font: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+main {
+    height: 90vh;
+}
