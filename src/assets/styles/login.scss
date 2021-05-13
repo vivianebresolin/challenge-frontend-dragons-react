@@ -1,0 +1,121 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    .greeting {  
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 5rem;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        
+        h1 {
+            font-size: 2.5rem;            
+        }
+    
+        h2 {
+            margin-top: 1rem;
+            letter-spacing: 0.08rem;
+        }
+    }
+
+    .login-container {    
+        background: rgba(0,0,0,0.5);
+        height: 45vh;
+        width: 35vw;
+        //padding: 1rem;
+    
+        border: 1px solid white;
+        border-radius: 0.4rem;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            margin-bottom: 1.75rem;
+            font-size: 2rem;
+            font-weight: 300;
+            text-shadow: black 0.1em 0.1em 0.2em;
+        }
+    
+        input, button {
+            width: 20rem;
+            padding: 0.9rem;
+            outline: none;
+            border: none;
+            border-radius: 0.4rem;            
+            letter-spacing: 0.05rem;
+        }
+
+        input + input {
+            margin-top: 0.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        input {
+            filter: brightness(0.95);
+        }
+
+        button {
+            background-color: #D97D34;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-shadow: black 0.1em 0.1em 0.2em;            
+        }
+
+        button:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    main {
+        .login-container {
+           width: 50vw;
+        }
+    } 
+}
+
+@media (max-width: 982px) {
+    main {
+        .login-container {
+           width: 60vw;
+        }
+    } 
+}
+
+@media (max-width: 768px) {
+    main {
+        .greeting {
+            max-width: 90vw;
+            margin-bottom: 4rem;
+        }
+    
+        .login-container {
+           width: 75vw;
+        }
+    } 
+}
+
+@media (max-width: 576px) {  
+    .login-container {
+        width: 90vw;
+    }
+
+    input, button {
+        width: 15rem;
+    }
+} 
+
+
+
+
+
+
