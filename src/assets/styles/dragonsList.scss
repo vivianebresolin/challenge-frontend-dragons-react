@@ -1,0 +1,73 @@
+#dragons-list {
+    max-width: 90vw;
+    margin: auto;  
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 100%;   
+}
+
+li {
+    border: 1px solid white;
+    padding: 1.25rem;
+    margin: 1rem 1rem 0 1rem;
+    font-size: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35rem;
+
+    #dragon-name {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        #dragon-head {
+            height: 5rem;
+            border-radius: 50%;
+            margin-right: 0.8rem;
+        }
+    }    
+
+    #buttons-list {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        button {            
+            font-size: 1rem;
+            letter-spacing: 0.08rem;
+            font-weight: 300;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            padding: 0.3rem;
+            width: 4.9rem;  
+            border: none;   
+            color: #fff;          
+        }
+
+        .edit {
+            background-color: #5d8aa8e7;
+
+            &:hover {
+                filter: brightness(0.85);
+            }
+        }
+
+        .delete {
+            background-color: #e32636ea;
+
+            &:hover {
+                filter: brightness(0.85);
+            }
+        }
+
+        button + button {
+            margin-left: 0.5rem;
+        }
+    }
+}
