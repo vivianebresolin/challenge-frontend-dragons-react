@@ -1,0 +1,28 @@
+#card {
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    display: flex;
+}
+
+picture img {
+    height: 30rem;
+    border-right: 1px solid #fff;
+}
+
+#details {
+    width: 90%;
+    padding: 1rem;
+
+    text-align: center;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    p {
+        font-size: 1.3rem;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+    }
+}
