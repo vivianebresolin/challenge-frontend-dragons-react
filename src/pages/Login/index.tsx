@@ -5,7 +5,7 @@ import '../../assets/styles/login.scss';
 export function Login() {
     return (
         <>
-            <main>
+            <main id="main-login">
                 <div className="greeting">
                     <h1>Bem-vindo(a) ao <strong>Mundo dos Dragões!</strong></h1>
                     <h2>Faça o login e entre nesse mundo mágico</h2>

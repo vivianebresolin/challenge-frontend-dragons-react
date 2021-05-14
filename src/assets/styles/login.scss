@@ -1,4 +1,4 @@
-main {
+#main-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,6 @@ main {
         background: rgba(0,0,0,0.5);
         height: 45vh;
         width: 35vw;
-        //padding: 1rem;
     
         border: 1px solid white;
         border-radius: 0.4rem;
@@ -76,7 +75,7 @@ main {
 }
 
 @media (max-width: 1200px) {
-    main {
+    #main-login{
         .login-container {
            width: 50vw;
         }
@@ -84,7 +83,7 @@ main {
 }
 
 @media (max-width: 982px) {
-    main {
+    #main-login{
         .login-container {
            width: 60vw;
         }
@@ -92,7 +91,7 @@ main {
 }
 
 @media (max-width: 768px) {
-    main {
+    #main-login {
         .greeting {
             max-width: 90vw;
             margin-bottom: 4rem;
@@ -113,9 +112,3 @@ main {
         width: 15rem;
     }
 } 
-
-
-
-
-
-
