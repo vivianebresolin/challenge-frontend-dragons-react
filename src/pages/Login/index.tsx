@@ -8,7 +8,7 @@ export function Login() {
             <main id="main-login">
                 <div className="greeting">
                     <h1>Bem-vindo(a) ao <strong>Mundo dos Dragões!</strong></h1>
-                    <h2>Faça o login e entre nesse mundo mágico</h2>
+                    <h2>Faça o seu login e entre nesse mundo mágico</h2>
                 </div>
 
                 <div className="login-container">
