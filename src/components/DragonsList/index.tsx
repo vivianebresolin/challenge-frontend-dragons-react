@@ -1,19 +1,17 @@
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
+import { Link } from 'react-router-dom';
+import { useDragon } from '../../hooks/useDragon';
 import DragonHead from '../../assets/img/dragon-head.jpg';
-import { Dragon } from '../../types';
 import '../../assets/styles/dragonsList.scss';
 import { orderListByName } from "../../utils/orderListbyName";
 
 export function DragonsList() {
-    const [dragons, setDragons] = useState<Dragon[]>([]);
-
-    useEffect(() => {
-        api.get<Dragon[]>('/')
-            .then(response => setDragons(response.data));
-    }, []);
+    const { dragons, showDragon } = useDragon();
 
     const dragonsOrderedByName = orderListByName([...dragons]);
+
+    function handleShowDragon(dragonId: string) {
+        showDragon(dragonId);
+    }
 
     return (
         <div id="dragons-list">
@@ -25,7 +23,9 @@ export function DragonsList() {
                             {dragon.name}
                         </div>
                         <div id="buttons-list">
-                            <button type="button" className="edit">Ver/Editar</button>
+                            <button type="button" className="edit" onClick={() => handleShowDragon(dragon.id)}>
+                                <Link to='/dragon-details' style={{ textDecoration: 'none', color: 'white' }}>Ver/Editar</Link>
+                            </button>
                             <button type="button" className="delete">Excluir</button>
                         </div>
                     </li>
