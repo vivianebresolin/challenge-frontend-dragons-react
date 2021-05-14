@@ -1,0 +1,23 @@
+#main-dragon-details::after {
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0; 
+    left:0;
+    background:rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+#main-dragon-details {
+    max-width: 45vw;
+    margin: auto;
+
+    color: white;
+
+    h1 {
+        text-align: center;
+        padding: 3rem 0;
+    }
+}
+
