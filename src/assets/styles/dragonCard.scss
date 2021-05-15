@@ -1,17 +1,22 @@
-#card {
-    border: 1px solid #fff;
+#card {    
     border-radius: 0.5rem;
     display: flex;
-}
 
-picture img {
-    height: 30rem;
-    border-right: 1px solid #fff;
+    img {    
+        height: 30rem;
+        width: 25rem;
+        margin-right: 1rem;
+        border: 1px solid #fff;
+        border-radius: 0.5rem;
+    }
 }
 
 #details {
-    width: 90%;
+    height: 30rem;
+    width: 25rem;
     padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
 
     text-align: center;
     text-shadow: black 0.1em 0.1em 0.2em;
@@ -24,5 +29,76 @@ picture img {
         font-size: 1.3rem;
         font-weight: 400;
         letter-spacing: 0.1rem;
+    }
+}
+
+#buttons {
+    margin-top: 1rem;
+
+    button {
+        padding: 0.4rem 0.7rem;
+        font-size: 1.2rem;
+        text-shadow: black 0.1em 0.1em 0.2em;
+
+    }
+
+    .edit {
+        background-color: #5d8aa8e7;
+        color: white;
+
+        &:hover {
+            filter: brightness(0.85);
+        }
+    }
+
+    .back {
+        background-color: rgba(10, 170, 10, 0.863);
+        margin-right: 0.25rem;
+
+        &:hover {
+            filter: brightness(0.85);
+        }
+    }
+
+}
+
+@media (max-width: 1200px) {
+    #main-dragon-details {
+        max-width: 60vw;
+    }
+}
+
+@media (max-width: 982px) {
+    #main-dragon-details {
+        max-width: 70vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #card {    
+        flex-direction: column;
+        
+        img {
+            margin: 0 auto 1rem auto;
+        }
+
+        #details {
+            margin: auto;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    #card {    
+        flex-direction: column;
+        
+        img {
+            margin: 0 auto 1rem auto;
+        }
+
+        #details {
+            margin: auto;
+        }
     }
 }

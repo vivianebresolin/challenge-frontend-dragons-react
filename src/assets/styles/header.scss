@@ -12,7 +12,9 @@ header {
     color: white;
 
     button {
-        width: 5rem;
+        width: 5rem;  
+
+        color: white;
 
         display: flex;
         align-items: center;
@@ -20,8 +22,6 @@ header {
 
         padding: 0.2rem 0.5rem;
         background-color: #D97D34;
-        border: none;    
-
     }
 
 }

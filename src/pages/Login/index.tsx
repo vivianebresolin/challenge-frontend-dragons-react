@@ -13,8 +13,8 @@ export function Login() {
 
                 <div className="login-container">
                     <p>Login</p>
-                    <input placeholder="E-mail"></input>
-                    <input placeholder="Senha"></input>
+                    <input type="email" placeholder="E-mail"></input>
+                    <input type="password" placeholder="Senha"></input>
                     <button>Entrar</button>
                 </div>
             </main>

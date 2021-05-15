@@ -10,9 +10,7 @@ export function DragonCard() {
     return (
         <>
             <div id="card">
-                <picture>
-                    <img src={imgDragon} alt="Dragão" />
-                </picture>
+                <img src={imgDragon} alt="Dragão" />
                 <div id="details">
                     <div>
                         <h2>Nome:</h2>
