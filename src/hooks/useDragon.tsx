@@ -1,21 +1,18 @@
+import Swal from 'sweetalert2';
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 import { api } from '../services/api';
-import { Dragon } from '../types';
+import { Dragon, DragonInput } from '../types';
 
 interface DragonProviderProps {
     children: ReactNode;
 }
 
-// interface CartContextData {
-//   cart: Product[];
-//   addProduct: (productId: number) => Promise<void>;
-//   removeProduct: (productId: number) => void;
-//   updateProductAmount: ({ productId, amount }: UpdateProductAmount) => void;
-// }
 interface DragonContextData {
     dragons: Dragon[];
-    showDragon: (dragonId: string) => Promise<void>;
     dragon: Dragon;
+    showDragon: (dragonId: string) => Promise<void>;
+    addDragon: (newDragon: DragonInput) => Promise<void>;
+    removeDragon: (dragonId: string) => Promise<void>;
 }
 
 const DragonContext = createContext<DragonContextData>({} as DragonContextData);
@@ -43,9 +40,50 @@ export function DragonProvider({ children }: DragonProviderProps): JSX.Element {
         }
     }
 
+    async function addDragon(newDragon: DragonInput) {
+        try {
+            const response = await api.post<Dragon>('/', {
+                ...newDragon,
+                createdAt: new Date(),
+            });
+            const registeredDragon = response.data;
+
+            setDragons([
+                ...dragons,
+                registeredDragon
+            ]);
+        }
+        catch {
+
+        }
+    }
+
+    async function removeDragon(dragonId: string) {
+        try {
+            const response = await api.delete<Dragon>(`/${dragonId}`)
+            console.log(response);
+
+            if (response) {
+                const updatedDragons = dragons.filter(dragon => dragonId !== dragon.id);
+
+                setDragons(updatedDragons);
+
+                Swal.fire(
+                    'Deletado!',
+                    'O dragão escolhido foi deletado.',
+                    'success'
+                )
+            }
+
+        }
+        catch {
+
+        }
+    }
+
     return (
         <DragonContext.Provider
-            value={{ dragons, showDragon, dragon }}
+            value={{ dragons, dragon, showDragon, addDragon, removeDragon }}
         >
             {children}
         </DragonContext.Provider>
