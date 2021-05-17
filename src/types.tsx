@@ -2,8 +2,12 @@ export interface Dragon {
     id: string;
     name: string;
     type: string;
-    histories: string
+    histories: string;
     createdAt: string;
+    dateFormatted?: string
+    updatedAt?: string
 }
 
 export type DragonInput = Omit<Dragon, 'id' | 'createdAt'>
+
+export type DragonToUpdate = Omit<Dragon, 'createdAt'>
