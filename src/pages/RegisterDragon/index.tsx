@@ -1,4 +1,4 @@
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDragon } from '../../hooks/useDragon';
 import '../../assets/styles/registerDragon.scss';
 import { Header } from '../../components/Header';
@@ -48,7 +48,9 @@ export function RegisterDragon() {
                         onChange={event => setHistories(event.target.value)} />
 
                     <button onClick={handleRegisterDragon}>Cadastrar</button>
+                    <Link to='/home' className='back'>Voltar</Link>
                 </div>
+
             </main>
         </>
     );

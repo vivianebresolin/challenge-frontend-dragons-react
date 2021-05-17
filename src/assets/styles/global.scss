@@ -49,6 +49,12 @@ main:not(#main-login)::after  {
     z-index: -1;
 }
 
+a {
+    font: inherit;
+    text-decoration: none;
+    color: white;
+}
+
 input {
     font: inherit;
     border: none;
@@ -59,6 +65,7 @@ button {
     color: white;
     cursor: pointer;
     border: none;
+    outline: none;
 }
 
 textarea {

@@ -16,13 +16,14 @@ export function DragonsList() {
 
     function handleDeleteDragon(dragonId: string) {
         Swal.fire({
-            title: 'Você tem certeza que quer deletar?',
+            title: 'Você tem certeza que quer excluir?',
             text: "Você não poderá desfazer essa ação!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Sim, delete o dragão!'
+            confirmButtonText: 'Sim, exclua o dragão!',
+            cancelButtonText: 'Cancelar',
         }).then((result) => {
             if (result.isConfirmed) {
                 removeDragon(dragonId);
@@ -40,9 +41,12 @@ export function DragonsList() {
                             {dragon.name}
                         </div>
                         <div id="buttons-list">
-                            <button type="button" className="edit" onClick={() => handleShowDragon(dragon.id)}>
-                                <Link to='/dragon-details' style={{ textDecoration: 'none', color: 'white' }}>Ver/Editar</Link>
-                            </button>
+                            <Link
+                                to='/dragon-details'
+                                className="edit"
+                                onClick={() => handleShowDragon(dragon.id)}>
+                                Ver/Editar
+                            </Link>
                             <button type="button" className="delete" onClick={() => handleDeleteDragon(dragon.id)}>Excluir</button>
                         </div>
                     </li>

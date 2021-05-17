@@ -22,6 +22,8 @@
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     input, button, textarea {
         width: 20rem;
         padding: 0.9rem;
@@ -52,5 +54,30 @@
 
     button:hover {
         filter: brightness(0.9);
+    }
+
+    textarea {
+        filter: brightness(0.95);
+    }
+
+    a {
+        position: absolute;
+        right: -0.3rem;
+        bottom: -3rem;
+
+        padding: 0.4rem 0.7rem;
+        border-radius: 0.15rem;
+
+        font-size: 1.2rem;
+        text-shadow: black 0.1em 0.1em 0.2em;
+
+        &.back {
+            background-color: rgba(10, 170, 10, 0.863);
+            margin-right: 0.25rem;
+    
+            &:hover {
+                filter: brightness(0.85);
+            }
+        }
     }
 }
