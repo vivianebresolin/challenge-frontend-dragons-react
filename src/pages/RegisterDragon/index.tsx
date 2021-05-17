@@ -48,9 +48,8 @@ export function RegisterDragon() {
                         onChange={event => setHistories(event.target.value)} />
 
                     <button onClick={handleRegisterDragon}>Cadastrar</button>
-                    <Link to='/home' className='back'>Voltar</Link>
                 </div>
-
+                <Link to='/home' className='back'>Voltar</Link>
             </main>
         </>
     );

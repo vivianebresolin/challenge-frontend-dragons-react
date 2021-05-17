@@ -115,7 +115,6 @@ export function DragonProvider({ children }: DragonProviderProps): JSX.Element {
     async function removeDragon(dragonId: string) {
         try {
             const response = await api.delete<Dragon>(`/${dragonId}`)
-            console.log(response);
 
             if (response) {
                 const updatedDragons = dragons.filter(dragon => dragonId !== dragon.id);

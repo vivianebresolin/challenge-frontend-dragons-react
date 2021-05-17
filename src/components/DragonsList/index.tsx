@@ -10,8 +10,8 @@ export function DragonsList() {
 
     const dragonsOrderedByName = orderListByName([...dragons]);
 
-    function handleShowDragon(dragonId: string) {
-        showDragon(dragonId);
+    async function handleShowDragon(dragonId: string) {
+        await showDragon(dragonId);
     }
 
     function handleDeleteDragon(dragonId: string) {
