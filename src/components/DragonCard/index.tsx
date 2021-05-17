@@ -1,14 +1,43 @@
+import { Link, useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { useState } from 'react';
 import { useDragon } from '../../hooks/useDragon';
-import { Link } from 'react-router-dom';
+import { EditDragonModal } from '../../components/EditDragonModal';
 import imgDragon from '../../assets/img/dragon-card.jpg';
 import '../../assets/styles/dragonCard.scss';
 
-interface DragonCardProps {
-    onOpenEditDragonModal: () => void;
-}
+export function DragonCard() {
+    const { dragon, removeDragon } = useDragon();
+    const history = useHistory();
+    const returnToHome = () => history.push('home');
 
-export function DragonCard({ onOpenEditDragonModal }: DragonCardProps) {
-    const { dragon } = useDragon();
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function handleOpenModal() {
+        setIsOpen(true);
+    }
+
+    function handleCloseModal() {
+        setIsOpen(false);
+        returnToHome();
+    }
+
+    function handleDeleteDragon(dragonId: string) {
+        Swal.fire({
+            title: 'Você tem certeza que quer excluir?',
+            text: "Você não poderá desfazer essa ação!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, exclua o dragão!',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                removeDragon(dragonId);
+            }
+        });
+    }
 
     return (
         <>
@@ -34,11 +63,12 @@ export function DragonCard({ onOpenEditDragonModal }: DragonCardProps) {
                 </div>
             </div>
             <div id="buttons">
-                <button type="button" className="back">
-                    <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>Voltar</Link>
-                </button>
-                <button type="button" className="edit" onClick={onOpenEditDragonModal}>Editar</button>
+                <Link to='/home' className="back" style={{ textDecoration: 'none', color: 'white' }}>Voltar</Link>
+                <button type="button" className="edit" onClick={handleOpenModal} >Editar</button>
+                <button type="button" className="delete" onClick={() => handleDeleteDragon(dragon.id)}>Excluir</button>
             </div>
+
+            <EditDragonModal isOpen={modalIsOpen} onRequestClose={handleCloseModal} />
         </>
     );
 }

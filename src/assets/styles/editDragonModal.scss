@@ -1,0 +1,108 @@
+.react-modal-overlay {
+    background: rgba(0,0,0,0.7);    
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.react-modal-content {
+    width: 100%;
+    max-width: 768px;   
+    outline: 0;
+}
+
+.modal-container { 
+    background: rgba(107, 107, 107);   
+    border-radius: 0.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    padding: 5rem 0;
+
+    position: relative;
+
+    .react-modal-close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        background: transparent;
+        transition: filter 0.2s;
+    
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+
+    label {
+        font-size: 1.4rem;
+        margin-top: 0.85rem;
+    }
+
+    input, button, textarea {
+        width: 25rem;
+        padding: 0.9rem;
+        letter-spacing: 0.05rem;
+        font-size: 1.4rem;
+    }
+
+    button {
+        background-color: #D97D34;
+        font-size: 1.4rem;
+        font-weight: 600;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        margin-top: 1.5rem;            
+    }
+
+    button:hover {
+        filter: brightness(0.9);
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .modal-container {
+       width: 50vw;
+    }
+} 
+
+@media (max-width: 982px) {
+
+    .modal-container {
+       width: 60vw;
+    }
+} 
+
+@media (max-width: 768px) {
+
+    .modal-container {
+       width: 75vw;
+    }
+} 
+
+@media (max-width: 576px) {  
+    .modal-container {
+        width: 90vw;
+        
+        input, button, textarea {
+            max-width: 22rem;
+        }
+    }
+}
+
+@media (max-width: 300px) {  
+    .modal-container {
+
+         input, button, textarea {
+                max-width: 20rem;
+        }
+    }
+} 
