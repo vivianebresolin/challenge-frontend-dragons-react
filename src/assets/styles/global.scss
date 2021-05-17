@@ -45,7 +45,7 @@ main:not(#main-login)::after  {
     height:100%;
     top:0; 
     left:0;
-    background:rgba(0,0,0,0.6);
+    background:rgba(0,0,0,0.55);
     z-index: -1;
 }
 
@@ -53,11 +53,13 @@ a {
     font: inherit;
     text-decoration: none;
     color: white;
+    border-radius: 0.15rem;
 }
 
 input {
     font: inherit;
     border: none;
+    outline: none;
 }
 
 button {
@@ -70,4 +72,6 @@ button {
 
 textarea {
     font: inherit;
+    border-radius: 0.25rem;
+    outline: none;
 }

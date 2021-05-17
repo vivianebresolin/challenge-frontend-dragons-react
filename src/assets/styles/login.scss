@@ -43,15 +43,12 @@
         input, button {
             width: 20rem;
             padding: 0.9rem;
-            outline: none;
-            border: none;
-            border-radius: 0.4rem;            
             letter-spacing: 0.05rem;
         }
 
         input + input {
-            margin-top: 0.3rem;
-            margin-bottom: 0.8rem;
+            margin-top: 0.75rem;
+            margin-bottom: 1.75rem;
         }
 
         input {
@@ -74,6 +71,7 @@
 
 @media (max-width: 1200px) {
     #main-login{
+
         .login-container {
            width: 50vw;
         }
@@ -82,6 +80,7 @@
 
 @media (max-width: 982px) {
     #main-login{
+
         .login-container {
            width: 60vw;
         }
@@ -90,6 +89,7 @@
 
 @media (max-width: 768px) {
     #main-login {
+        
         .greeting {
             max-width: 90vw;
             margin-bottom: 4rem;
@@ -104,9 +104,9 @@
 @media (max-width: 576px) {  
     .login-container {
         width: 90vw;
-    }
-
-    input, button {
-        width: 15rem;
+        
+        input, button {
+            width: 15rem;
+        }
     }
 } 

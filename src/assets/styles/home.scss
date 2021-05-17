@@ -1,9 +1,7 @@
 #main-home {
-    color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
     width: 100vw;
-    height: 90vh;
     overflow: auto;
 
     #title {
@@ -33,5 +31,22 @@
         }
     }
 
+}
+
+@media (max-width: 576px) {
+    #main-home{
+
+        #title {
+            flex-direction: column;
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+
+            button {
+                margin-bottom: 1rem;
+            }
+        } 
+    }
 }
 

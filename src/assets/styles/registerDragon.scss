@@ -5,79 +5,120 @@
     justify-content: center;
 
     h1 {
-        margin: -10rem 0 2rem 0;
-    }
-}
-
-.register-container {    
-    background: rgba(0,0,0,0.5);
-    height: 50vh;
-    width: 35vw;
-
-    border: 1px solid white;
-    border-radius: 0.4rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
-    input, button, textarea {
-        width: 20rem;
-        padding: 0.9rem;
-        outline: none;
-        border: none;
-        border-radius: 0.4rem;            
-        letter-spacing: 0.05rem;
-    }
-
-    input {
-        filter: brightness(0.95);
-        margin-bottom: 1rem;
-    }
-
-    label {
-        font-size: 1.25rem;        
-    }
-
-    button {
-        width: 12rem;
-        background-color: #D97D34;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-shadow: black 0.1em 0.1em 0.2em;
-        margin-top: 2.5rem;                   
-    }
-
-    button:hover {
-        filter: brightness(0.9);
-    }
-
-    textarea {
-        filter: brightness(0.95);
+        margin: -2rem 0 2rem 0;
     }
 
     a {
-        position: absolute;
-        right: -0.3rem;
-        bottom: -3rem;
-
-        padding: 0.4rem 0.7rem;
-        border-radius: 0.15rem;
+        padding: 0.4rem 1.7rem;
+        margin-top: 1.5rem;
 
         font-size: 1.2rem;
         text-shadow: black 0.1em 0.1em 0.2em;
 
         &.back {
             background-color: rgba(10, 170, 10, 0.863);
-            margin-right: 0.25rem;
     
             &:hover {
                 filter: brightness(0.85);
             }
         }
     }
+
+    .register-container {    
+        background: rgba(0,0,0,0.5);
+        height: 60vh;
+        width: 40vw;
+    
+        border: 1px solid white;
+        border-radius: 0.4rem;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        input, button, textarea {
+            width: 25rem;
+            padding: 0.9rem;
+            letter-spacing: 0.05rem;
+        }
+    
+        input {
+            filter: brightness(0.95);
+            margin-bottom: 1rem;
+        }
+    
+        label {
+            font-size: 1.25rem;        
+        }
+    
+        button {
+            width: 12rem;
+            background-color: #D97D34;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            margin-top: 2.5rem;                   
+        }
+    
+        button:hover {
+            filter: brightness(0.9);
+        }
+    
+        textarea {
+            filter: brightness(0.95);
+        }
+    }
 }
+
+@media (max-width: 1200px) {
+    #main-register{
+
+        .register-container {
+           width: 50vw;
+        }
+    } 
+}
+
+@media (max-width: 982px) {
+    #main-register{
+
+        .register-container {
+           width: 60vw;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #main-register{  
+              
+        .register-container {
+            width: 75vw;
+        }   
+    } 
+}
+
+@media (max-width: 576px) {  
+    #main-register{
+
+        .register-container {
+            width: 87vw;
+            
+            input, button, textarea {
+                max-width: 22rem;
+            }
+        }
+    } 
+} 
+
+@media (max-width: 300px) {  
+    #main-register{
+
+        .register-container {
+
+            input, button, textarea {
+                max-width: 20rem;
+            }
+        }
+    } 
+} 

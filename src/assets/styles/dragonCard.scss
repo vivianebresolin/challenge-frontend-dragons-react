@@ -1,6 +1,7 @@
 #card {    
     border-radius: 0.5rem;
     display: flex;
+    justify-content: center;
 
     img {    
         height: 32rem;
@@ -9,70 +10,73 @@
         border: 1px solid #fff;
         border-radius: 0.5rem;
     }
-}
 
-#details {
-    height: 32rem;
-    width: 25rem;
-    padding: 1rem;
-    border: 1px solid #fff;
-    border-radius: 0.5rem;
+    #details {
+        height: 32rem;
+        width: 25rem;
+        padding: 1rem;
+        border: 1px solid #fff;
+        border-radius: 0.5rem;
+    
+        text-align: center;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
-    text-align: center;
-    text-shadow: black 0.1em 0.1em 0.2em;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    p {
-        font-size: 1.3rem;
-        font-weight: 400;
-        letter-spacing: 0.1rem;
+        p {
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+        }
     }
 }
 
 #buttons {
     margin-top: 1rem;
 
-    button {
+    a, button {
         padding: 0.4rem 0.7rem;
         font-size: 1.2rem;
         text-shadow: black 0.1em 0.1em 0.2em;
     }
 
-    .edit {
-        background-color: #5d8aa8e7;
-        color: white;
+    a {
+        padding: 0.4rem 2.2rem;
 
-        &:hover {
-            filter: brightness(0.85);
+        &.back {
+            background-color: rgba(10, 170, 10, 0.863);
+    
+            &:hover {
+                filter: brightness(0.85);
+            }
         }
     }
 
-    .back {
-        background-color: rgba(10, 170, 10, 0.863);
-        margin-right: 0.25rem;
+    button {
+        width: 7rem;
 
-        &:hover {
-            filter: brightness(0.85);
+        &.edit {
+            background-color: #5d8aa8e7;
+            margin: 0 0.35rem;
+    
+            &:hover {
+                filter: brightness(0.85);
+            }
         }
-    }
-}
 
-@media (max-width: 1200px) {
-    #main-dragon-details {
-        max-width: 60vw;
+        &.delete {
+            background-color: #e32636ea;
+
+            &:hover {
+                filter: brightness(0.85);
+            }
+        }
     }
 }
 
 @media (max-width: 982px) {
-    #main-dragon-details {
-        max-width: 70vw;
-    }
-}
-
-@media (max-width: 768px) {
     #card {    
         flex-direction: column;
         
@@ -84,19 +88,8 @@
             margin: auto;
         }
     }
-}
 
-
-@media (max-width: 576px) {
-    #card {    
-        flex-direction: column;
-        
-        img {
-            margin: 0 auto 1rem auto;
-        }
-
-        #details {
-            margin: auto;
-        }
+    #buttons {
+        margin-bottom: 1rem;
     }
 }
