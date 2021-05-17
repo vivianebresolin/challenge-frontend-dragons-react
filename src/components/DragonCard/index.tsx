@@ -1,10 +1,13 @@
 import { useDragon } from '../../hooks/useDragon';
 import { Link } from 'react-router-dom';
 import imgDragon from '../../assets/img/dragon-card.jpg';
-
 import '../../assets/styles/dragonCard.scss';
 
-export function DragonCard() {
+interface DragonCardProps {
+    onOpenEditDragonModal: () => void;
+}
+
+export function DragonCard({ onOpenEditDragonModal }: DragonCardProps) {
     const { dragon } = useDragon();
 
     return (
@@ -26,7 +29,7 @@ export function DragonCard() {
                     </div>
                     <div>
                         <h2>Data de criação:</h2>
-                        <p>{dragon.createdAt}</p>
+                        <p>{dragon.dateFormatted}</p>
                     </div>
                 </div>
             </div>
@@ -34,7 +37,7 @@ export function DragonCard() {
                 <button type="button" className="back">
                     <Link to='/home' style={{ textDecoration: 'none', color: 'white' }}>Voltar</Link>
                 </button>
-                <button type="button" className="edit">Editar</button>
+                <button type="button" className="edit" onClick={onOpenEditDragonModal}>Editar</button>
             </div>
         </>
     );
