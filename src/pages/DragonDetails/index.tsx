@@ -6,7 +6,6 @@ import { Header } from '../../components/Header';
 Modal.setAppElement('#root');
 
 export function DragonDetails() {
-
     return (
         <>
             <Header />

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 import Modal from 'react-modal';
 import imgClose from '../../assets/img/close.svg';
 import { useDragon } from '../../hooks/useDragon';
@@ -27,7 +28,10 @@ export function EditDragonModal({ isOpen, onRequestClose }: EditDragonModalProps
         if (name === dragon.name) {
             if (type === dragon.type) {
                 if (histories === dragon.histories) {
-                    alert('nao ha alteracoes para salvar.');
+                    Swal.fire(
+                        'Não há alterações para salvar.',
+                        'warning'
+                    );
                     return;
                 }
             }

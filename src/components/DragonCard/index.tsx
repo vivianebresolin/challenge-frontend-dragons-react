@@ -7,9 +7,8 @@ import imgDragon from '../../assets/img/dragon-card.jpg';
 import '../../assets/styles/dragonCard.scss';
 
 export function DragonCard() {
-    const { dragon, removeDragon } = useDragon();
+    const { dragon, showDragon, removeDragon } = useDragon();
     const history = useHistory();
-    const returnToHome = () => history.push('home');
 
     const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -19,7 +18,11 @@ export function DragonCard() {
 
     function handleCloseModal() {
         setIsOpen(false);
-        returnToHome();
+        showDragon(dragon.id);
+    }
+
+    function returnToHome() {
+        history.push('home');
     }
 
     function handleDeleteDragon(dragonId: string) {
@@ -35,6 +38,7 @@ export function DragonCard() {
         }).then((result) => {
             if (result.isConfirmed) {
                 removeDragon(dragonId);
+                returnToHome();
             }
         });
     }
@@ -62,6 +66,7 @@ export function DragonCard() {
                     </div>
                 </div>
             </div>
+
             <div id="buttons">
                 <Link to='/home' className="back" style={{ textDecoration: 'none', color: 'white' }}>Voltar</Link>
                 <button type="button" className="edit" onClick={handleOpenModal} >Editar</button>

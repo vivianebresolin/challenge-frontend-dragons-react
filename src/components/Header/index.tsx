@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MdExitToApp } from 'react-icons/md';
-
 import '../../assets/styles/header.scss';
-
 
 export function Header() {
     return (

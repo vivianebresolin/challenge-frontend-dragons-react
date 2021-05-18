@@ -1,5 +1,4 @@
 import { Footer } from '../../components/Footer';
-
 import '../../assets/styles/login.scss';
 
 export function Login() {

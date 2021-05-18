@@ -1,6 +1,4 @@
 #main-home {
-    text-shadow: black 0.1em 0.1em 0.2em;
-    text-align: center;
     width: 100vw;
     overflow: auto;
 
@@ -30,7 +28,6 @@
             }
         }
     }
-
 }
 
 @media (max-width: 576px) {
@@ -49,4 +46,3 @@
         } 
     }
 }
-

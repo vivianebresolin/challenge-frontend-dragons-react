@@ -1,5 +1,4 @@
 import { FaLinkedin } from 'react-icons/fa';
-
 import '../../assets/styles/footer.scss';
 
 export function Footer() {

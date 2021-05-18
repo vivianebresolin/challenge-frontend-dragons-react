@@ -56,6 +56,7 @@ export function DragonProvider({ children }: DragonProviderProps): JSX.Element {
                 ...newDragon,
                 createdAt: new Date(),
             });
+
             const registeredDragon = response.data;
 
             setDragons([
@@ -87,6 +88,7 @@ export function DragonProvider({ children }: DragonProviderProps): JSX.Element {
                 histories: dragon.histories,
                 updatedAt: new Date(),
             });
+
             const dragonUpdated = response.data;
 
             if (dragonUpdated) {
@@ -101,7 +103,6 @@ export function DragonProvider({ children }: DragonProviderProps): JSX.Element {
                     'success'
                 );
             }
-
         }
         catch {
             Swal.fire({
@@ -126,10 +127,7 @@ export function DragonProvider({ children }: DragonProviderProps): JSX.Element {
                     'O dragão escolhido foi banido da Terra.',
                     'success'
                 )
-            } else {
-                throw Error();
             }
-
         }
         catch {
             Swal.fire({
