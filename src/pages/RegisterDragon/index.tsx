@@ -49,7 +49,7 @@ export function RegisterDragon() {
 
                     <button onClick={handleRegisterDragon}>Cadastrar</button>
                 </div>
-                <Link to='/home' className='back'>Voltar</Link>
+                <Link to='/' className='back'>Voltar</Link>
             </main>
         </>
     );

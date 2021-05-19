@@ -1,7 +1,25 @@
+import { useState } from 'react';
 import { Footer } from '../../components/Footer';
+import { useLogin } from '../../hooks/useLogin';
 import '../../assets/styles/login.scss';
+import { useHistory } from 'react-router-dom';
 
 export function Login() {
+    const { authenticate, setIsLogged } = useLogin();
+    const history = useHistory();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    function handleLogin() {
+        const isAuthenticated = authenticate({ email, password });
+
+        if (isAuthenticated) {
+            setIsLogged(true);
+            history.push('/');
+        }
+    }
+
     return (
         <>
             <main id="main-login">
@@ -12,9 +30,21 @@ export function Login() {
 
                 <div className="login-container">
                     <p>Login</p>
-                    <input type="email" placeholder="E-mail"></input>
-                    <input type="password" placeholder="Senha"></input>
-                    <button>Entrar</button>
+
+                    <input
+                        type="email"
+                        placeholder="E-mail"
+                        value={email}
+                        onChange={event => setEmail(event.target.value)}
+                    />
+                    <input
+                        type="password"
+                        placeholder="Senha"
+                        value={password}
+                        onChange={event => setPassword(event.target.value)}
+                    />
+
+                    <button type="button" onClick={handleLogin}>Entrar</button>
                 </div>
             </main>
             <Footer />

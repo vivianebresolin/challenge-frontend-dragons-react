@@ -11,3 +11,9 @@ export interface Dragon {
 export type DragonInput = Omit<Dragon, 'id' | 'createdAt'>
 
 export type DragonToUpdate = Omit<Dragon, 'createdAt'>
+
+export interface User {
+    email: string,
+    password: string
+}
+

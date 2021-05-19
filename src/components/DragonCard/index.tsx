@@ -68,7 +68,7 @@ export function DragonCard() {
             </div>
 
             <div id="buttons">
-                <Link to='/home' className="back" style={{ textDecoration: 'none', color: 'white' }}>Voltar</Link>
+                <Link to='/' className="back" style={{ textDecoration: 'none', color: 'white' }}>Voltar</Link>
                 <button type="button" className="edit" onClick={handleOpenModal} >Editar</button>
                 <button type="button" className="delete" onClick={() => handleDeleteDragon(dragon.id)}>Excluir</button>
             </div>
