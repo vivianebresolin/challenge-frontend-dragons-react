@@ -22,7 +22,7 @@ export function DragonCard() {
     }
 
     function returnToHome() {
-        history.push('home');
+        history.push('/');
     }
 
     function handleDeleteDragon(dragonId: string) {
