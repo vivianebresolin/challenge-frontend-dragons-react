@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { useDragon } from '../../hooks/useDragon';
 import '../../assets/styles/registerDragon.scss';
 import { Header } from '../../components/Header';
@@ -12,6 +13,15 @@ export function RegisterDragon() {
     const [histories, setHistories] = useState('');
 
     async function handleRegisterDragon() {
+        if ((name.length === 0) || (type.length === 0) || (histories.length === 0)) {
+            Swal.fire(
+                'Todos os itens precisam ser preenchidos.',
+                '',
+                'warning'
+            );
+            return;
+        }
+
         await addDragon({
             name,
             type,

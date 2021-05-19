@@ -11,7 +11,8 @@ export default function RoutePrivate({ component: Component, ...rest }) {
                 isLogged ? (
                     <Component {...props} />
                 ) : (
-                    <Redirect to={{ pathname: "/login", state: { from: props.location } }} />)
+                    <Redirect to="/login" />
+                )
             }
         />
     );

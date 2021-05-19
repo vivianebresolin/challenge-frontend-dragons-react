@@ -9,7 +9,7 @@ interface LoginProviderProps {
 
 interface LoginContextData {
     isLogged: boolean;
-    authenticate: ({ email, password }: User) => Promise<boolean>;
+    authenticate: ({ email, password }: User) => boolean;
     setIsLogged: (state: boolean) => void;
 }
 
@@ -18,8 +18,9 @@ const LoginContext = createContext<LoginContextData>({} as LoginContextData);
 export function LoginProvider({ children }: LoginProviderProps): JSX.Element {
     const [isLogged, setIsLogged] = useState(false);
 
-    async function authenticate({ email, password }: User) {
-        const response = await loginApi.verifyCredentials(email, password);
+    function authenticate({ email, password }: User) {
+        const response = loginApi.verifyCredentials(email, password);
+        console.log('useLogin - authenticate ', response);
 
         if (response) {
             localStorage.setItem('logged', email);

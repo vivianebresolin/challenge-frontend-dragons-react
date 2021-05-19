@@ -5,7 +5,7 @@ import '../../assets/styles/login.scss';
 import { useHistory } from 'react-router-dom';
 
 export function Login() {
-    const { authenticate, setIsLogged } = useLogin();
+    const { authenticate, setIsLogged, isLogged } = useLogin();
     const history = useHistory();
 
     const [email, setEmail] = useState('');
@@ -13,9 +13,12 @@ export function Login() {
 
     function handleLogin() {
         const isAuthenticated = authenticate({ email, password });
+        console.log('isAuthenticated ', isAuthenticated);
 
         if (isAuthenticated) {
+            console.log('login - entrou no if');
             setIsLogged(true);
+            console.log('isLogged ', isLogged);
             history.push('/');
         }
     }

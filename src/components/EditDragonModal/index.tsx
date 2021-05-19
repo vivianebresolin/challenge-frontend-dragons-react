@@ -30,6 +30,7 @@ export function EditDragonModal({ isOpen, onRequestClose }: EditDragonModalProps
                 if (histories === dragon.histories) {
                     Swal.fire(
                         'Não há alterações para salvar.',
+                        '',
                         'warning'
                     );
                     return;
