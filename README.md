@@ -1,4 +1,4 @@
-# Desafio Frontend - Dragons
+# Frontend Challenge - Dragons
 
 <br />
 
@@ -12,28 +12,28 @@
 
 <br />
 
-Esta é uma aplicação frontend, com consumo de uma API, desenvolvida com base nas orientações constantes neste link: [Teste para Desenvolvedor(a) Web](https://github.com/WoopSicredi/jobs/issues/6/).
+This is a frontend application that consumes an API, developed based on the guidelines provided in this link: [Web Developer Test](https://github.com/WoopSicredi/jobs/issues/6/).
 
-Caso queira visualizar a aplicação diretamente em seu navegador (computador ou celular), basta acessar este link
-https://dragons-vvbresolin.netlify.app/ e fazer o login com os seguintes dados:
+If you want to view the application directly in your browser (computer or cellphone), just access this link
+https://dragons-vvbresolin.netlify.app/ and log in with the following information:
 
 - E-mail: admin@admin.com
-- Senha: 4321
+- Password: 4321
 
 <br />
 
-## :hammer_and_wrench: Funcionalidades:
+## :hammer_and_wrench: Features:
 
-- Página de login
-- Página principal com listagem em ordem alfabética dos dragões
-- Visualização de todas as informações de um dragão específico escolhido pelo usuário
-- Cadastro de um novo dragão
-- Possibilidade de editar um dragão
-- Possibilidade de excluir um dragão (após mensagem de confirmação).
+- Login page;
+- Main page with an alphabetical listing of dragons;
+- Information details about a dragon chosen by the user;
+- Registering a new dragon;
+- Ability to edit dragon details;
+- Ability to delete a dragon (after a confirmation message).
 
 <br />
 
-## Imagens da aplicação
+## Application images
 
 <div align="center">
 
@@ -49,25 +49,25 @@ https://dragons-vvbresolin.netlify.app/ e fazer o login com os seguintes dados:
 
 <br />
 
-### Informações do dragão
+### Dragon details
 
 <img src="github/detalhes-dragao.PNG" width="100%"/>
 
 <br />
 
-### Exclusão mediante confirmação
+### Delete a dragon
 
 <img src="github/exclusao.PNG" width="100%"/>
 
 <br />
 
-### Cadastro de um dragão
+### Register a new dragon
 
 <img src="github/cadastro.PNG" width="100%"/>
 
 <br />
 
-### Mobile
+### Mobile friendly
 
 </div>
 
@@ -87,7 +87,7 @@ https://dragons-vvbresolin.netlify.app/ e fazer o login com os seguintes dados:
 
 <br /> 
 
-## :man_technologist: Tecnologias e ferramentas utilizadas:
+## :man_technologist: Technologies and tools used:
 
 - React
 - Typescript
@@ -100,19 +100,19 @@ https://dragons-vvbresolin.netlify.app/ e fazer o login com os seguintes dados:
 
 <br /> 
 
-## Rodando o projeto no localhost:
+## Running the project locally:
 
-Para rodar essa aplicação em sua máquina local, faça o download ou um clone do projeto, e então:
+To run this application on your local machine, download or clone the project, and then:
 
-1 - Para fazer o download das dependências:
+1 - o download the dependencies:
 
-### `yarn`
+### `yarn install`
 
-2 - Para inicializar a aplicação:
+2 - PTo start the application:
 
 ### `yarn start`
 
-3 - Abra [http://localhost:3000](http://localhost:3000) para visualizar no browser.
+3 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <br /> 
   
